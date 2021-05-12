@@ -1,0 +1,20 @@
+import PySimpleGUI as sg
+
+class TelaPython:
+    def _init_(self):
+        #Layouts
+        layout = [
+            [sg.Text('Nome'),sg.Input()],
+            [sg.Text('Idade'),sg.Input()],
+            [sg.Button('Enviar Dados')]
+        ]
+        #Janela
+        janela = sg.Window('Dados do Usuario').layout(layout)
+        #Extrair os dados
+        self.button, self.values = janela.Read()
+    
+    def Iniciar(self):
+            print(self.values)
+
+            tela = TelaPython()
+            tela.Iniciar()
